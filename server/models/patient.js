@@ -8,10 +8,6 @@ const patientSchema=new mongoose.Schema({
     email:{
         type:String,
         required:[true,"email is required"],
-        validate:{
-            validator:validator.isEmail,
-            message:"invalid email address"
-        }
     },
     phoneNumber:{
         type:String,
@@ -20,7 +16,10 @@ const patientSchema=new mongoose.Schema({
     medicenID:[
         {
             type:mongoose.Schema.Types.ObjectId,
-            ref:"medicine"
+            ref:"medecines"
         }
     ]
 })
+
+const patientModel=new mongoose.model("patients",)
+export default patientModel;

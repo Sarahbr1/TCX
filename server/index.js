@@ -3,6 +3,7 @@ import dotenv from 'dotenv'
 import morgan from 'morgan'
 import {connectDatabase} from './configs/db.config.js'
 import medecineRouter from './routers/medecineRoute.js'
+import patientRouter from './routers/patientRoute.js'
 const app = express();
 const port = 3000;
 dotenv.config();
@@ -13,6 +14,7 @@ app.use(morgan("dev"));
 
 
 app.use("/medecine",medecineRouter);
+app.use("/patient",patientRouter)
 
 
 app.get('/', (req, res) => {

@@ -28,6 +28,7 @@ const medecineSchema=new mongoose.Schema({
          type:String,
          required:[true,"this field is required"]
      },
+     
 });
 
 const medecineModel=mongoose.model("medecines",medecineSchema); 
