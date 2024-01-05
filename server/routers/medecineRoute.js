@@ -1,9 +1,19 @@
 import express from "express";
-import {loginController,profileControler} from './../controllers/medecineController.js'
-import pkg from 'express-openid-connect';
-const {requiresAuth } = pkg;
-const router=express.Router();
-router.get("/login",loginController);
-router.get("/profile",requiresAuth(),profileControler);
+import {
+  register,
+  login,
+  updateSpeciality,
+  updateUsername,
+  updateCabinetName,
+} from "./../controllers/medecineController.js";
+import { auth } from "../middlewares/auth.js";
+const medecineRouter = express.Router();
 
-export  {router};
+medecineRouter
+  .post("/register", register)
+  .post("/login", login)
+  .post("/update_speciality", auth, updateSpeciality)
+  .post("/update_username", auth, updateUsername)
+  .post("/update_cabinet", auth, updateCabinetName);
+
+export default medecineRouter;
