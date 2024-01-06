@@ -1,6 +1,7 @@
 import React from 'react'
 import SideBar from './SideBar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import MiniSideBarRouting from './MiniSideBarRouting'
 
 export default function SideBarRouting() {
   return (
@@ -40,5 +41,5 @@ function Acceuil(){
     return <h1>john doe</h1>
   }
   function Parametres(){
-    return <h1>john doe</h1>
+    return <MiniSideBarRouting/>
   }
