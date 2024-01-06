@@ -18,8 +18,8 @@ export default function SideBarRouting() {
         <Route path='/calendrier' element={<Calendrier />}></Route>
         <Route path='/notifications' element={<Notifications />}></Route>
         <Route path='/diagnostique' element={<Diagnostique />}></Route>
-        <Route path='/monprofil' element={<ProfilSideBar />}></Route>
-        <Route path="/parametres" element={<ParamSideBar />} />
+        <Route path='/monprofil/*' element={<ProfilSideBar />}></Route>
+        <Route path="/parametres/*" element={<ParamSideBar />} />
 
       </Routes>
     </div>
