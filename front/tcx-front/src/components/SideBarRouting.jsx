@@ -1,12 +1,13 @@
 import React from 'react'
 import SideBar from './SideBar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import MiniSideBarRouting from './MiniSideBarRouting'
-
+import ParamSideBar from './ParamSideBar'
+import ProfilSideBar from './ProfilSideBar'
+import Securite from '../pages/Securite'
 export default function SideBarRouting() {
   return (
     <BrowserRouter>
-        <div className='flex'> 
+        <div className='flex max-w-screen max-h-screen overflow-scroll'> 
     <div className=' col-auto'>
     <SideBar />
     </div>
@@ -16,8 +17,8 @@ export default function SideBarRouting() {
         <Route path='/patients' element={<Patients />}></Route>
         <Route path='/calendrier' element={<Calendrier />}></Route>
         <Route path='/notifications' element={<Notifications />}></Route>
-        <Route path='/monprofil' element={<Monprofil />}></Route>
-        <Route path="/parametres/*" element={<MiniSideBarRouting />} />
+        <Route path='/monprofil/*' element={<ProfilSideBar />}></Route>
+        <Route path="/parametres/*" element={<ParamSideBar />} />
 
       </Routes>
     </div>
@@ -39,9 +40,9 @@ function Acceuil(){
     return <h1>Vous n'avez pas de notifications récentes</h1>
   }
   function Monprofil(){
-    return <h1>john doe</h1>
+    return <ProfilSideBar/>
   }
   function Parametres(){
-    return <MiniSideBarRouting/>
+    return <ParamSideBar/>
         
   }
