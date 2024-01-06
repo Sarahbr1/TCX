@@ -3,6 +3,7 @@ import Specialities from "../configs/specialiteEnum.js";
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import joi from "joi";
+import { json } from "express";
 
 const register = async (req, res) => {
   const data = req.body;
@@ -99,7 +100,7 @@ const updateUsername=async (req,res)=>{
       _id: medId
     }, {
       username: newUsername
-    })
+    });
     return res.json({message:"username is updated",success:true})
   } catch (error) {
      console.log(error)
@@ -131,4 +132,18 @@ const updateCabinetName=async (req,res)=>{
 
 }
 
-export { register,login,updateSpeciality,updateUsername,updateCabinetName };
+const getInfos=async (req,res)=>{
+  const medId=req.id;
+  try {
+    const medecine=await medecineModel.findById(medId);
+    const {username,email,speciality,cabinet} =medecine;
+    res.json({message:"medecine informations are here",data:{username,email,speciality,cabinet}})
+  } catch (error) {
+    console.log(error)
+    return res.status(500).json(
+     {message:"server error ",success:false}
+    )
+  }
+}
+
+export { register,login,updateSpeciality,updateUsername,updateCabinetName,getInfos};
