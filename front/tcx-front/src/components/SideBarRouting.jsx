@@ -18,6 +18,8 @@ export default function SideBarRouting() {
         <Route path='/notifications' element={<Notifications />}></Route>
         <Route path='/monprofil' element={<Monprofil />}></Route>
         <Route path='/parametres' element={<Parametres />}></Route>
+        <Route path="/parametres/*" element={<MiniSideBarRouting />} />
+
       </Routes>
     </div>
    </div>

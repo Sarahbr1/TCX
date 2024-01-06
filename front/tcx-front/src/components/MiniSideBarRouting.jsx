@@ -1,6 +1,6 @@
 import React from 'react'
 import MiniSideBar from './MiniSideBar'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 
 export default function MiniSideBarRouting() {
   return (
@@ -10,8 +10,8 @@ export default function MiniSideBarRouting() {
     <MiniSideBar></MiniSideBar>
     </div>
     <Routes>
-      <Route path='/notifedit' element={<NotifEdit />}></Route>
-      <Route path='/aide' element={<Aide />}></Route>
+      <Route path='/parametres/notifedit' element={<NotifEdit />}></Route>
+      <Route path='/parametres/aide' element={<Aide />}></Route>
 
     </Routes>
     </div>
