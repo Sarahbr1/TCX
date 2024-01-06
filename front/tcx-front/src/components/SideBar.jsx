@@ -43,7 +43,7 @@ export default function SideBar() {
     </Link> 
   </li>
   <li className=' nav-item bg-vert-foncé-0 rounded-xl mt-4  pt-2 pb-2 ml-4 mr-4'>
-    <Link to=''>
+    <Link to='/diagnostique'>
     <i class="fa-solid fa-brain me-2 p-3 text-white"></i>
 
         <span className=' text-white text-opacity-6 pr-4'>Diagnostiquer avec l'IA</span>

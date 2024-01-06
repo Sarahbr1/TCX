@@ -3,7 +3,7 @@ import SideBar from './SideBar'
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import ParamSideBar from './ParamSideBar'
 import ProfilSideBar from './ProfilSideBar'
-import Securite from '../pages/Securite'
+import Diagnosis from '../pages/Diagnosis'
 export default function SideBarRouting() {
   return (
     <BrowserRouter>
@@ -17,8 +17,9 @@ export default function SideBarRouting() {
         <Route path='/patients' element={<Patients />}></Route>
         <Route path='/calendrier' element={<Calendrier />}></Route>
         <Route path='/notifications' element={<Notifications />}></Route>
-        <Route path='/monprofil/*' element={<ProfilSideBar />}></Route>
-        <Route path="/parametres/*" element={<ParamSideBar />} />
+        <Route path='/diagnostique' element={<Diagnostique />}></Route>
+        <Route path='/monprofil' element={<ProfilSideBar />}></Route>
+        <Route path="/parametres" element={<ParamSideBar />} />
 
       </Routes>
     </div>
@@ -44,5 +45,9 @@ function Acceuil(){
   }
   function Parametres(){
     return <ParamSideBar/>
+        
+  }
+  function Diagnostique(){
+    return <Diagnosis/>
         
   }
