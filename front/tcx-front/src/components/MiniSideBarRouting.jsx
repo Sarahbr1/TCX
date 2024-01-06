@@ -4,7 +4,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 export default function MiniSideBarRouting() {
   return (
-    <BrowserRouter>
+    
     <div className='flex'> 
   <div className=' col-auto'>
     <MiniSideBar></MiniSideBar>
@@ -15,7 +15,7 @@ export default function MiniSideBarRouting() {
 
     </Routes>
     </div>
-  </BrowserRouter>
+  
   )
 }
 function NotifEdit(){

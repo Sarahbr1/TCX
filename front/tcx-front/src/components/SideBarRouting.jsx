@@ -42,4 +42,5 @@ function Acceuil(){
   }
   function Parametres(){
     return <MiniSideBarRouting/>
+        
   }
