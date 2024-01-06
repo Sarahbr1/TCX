@@ -14,7 +14,7 @@ import DossierMedical from "./pages/DossierMedical";
 
 function App() {
   return (
-    <DossierMedical />
+    <Landing />
   );
 }
 
