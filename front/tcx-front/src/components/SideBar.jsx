@@ -61,7 +61,7 @@ export default function SideBar() {
   
   </li>
   <li className=' mt-3 mb-5'>
-    <Link to='/parametres'>
+    <Link to='/parametres/*'>
     <i class="fa-solid fa-gear me-2 ml-5 p-3 bg-vert-foncé-0 rounded-full text-white"></i>
     <span className=' text-vert-foncé-0'>Paramètres</span>
  
